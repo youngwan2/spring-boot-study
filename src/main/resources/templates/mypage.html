@@ -1,0 +1,17 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <span sec:authorize="hasAuthority('User')">User 권한 있는 유저만 보이는 글</span>
+    <div sec:authorize="isAuthenticated()">로그인한 유저만 보이는 글
+        <p sec:authentication="principal.username"></p>
+        <p sec:authentication="principal.authorities"></p>
+    </div>
+</body>
+</html>

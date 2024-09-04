@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/nav.css}">
+</head>
+<body>
+
+<div class="nav" th:fragment="navbar" style="
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    color: #fff;
+">
+    <a class="logo" style="
+        font-size: 24px;
+        font-weight: bold;
+        color: #fff;
+        text-decoration: none;
+    ">SpringMall</a>
+    <div style="
+        display: flex;
+        gap: 15px;
+    ">
+        <a href="/products" style="
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+        ">List</a>
+        <a href="/write" style="
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+        ">Write</a>
+    </div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" th:href="@{/css/login.css}">
+</head>
+<body>
+<form action="/login" method="post">
+    <div><label>Username: <input type="text" name="username"/></label></div>
+    <div><label>Password: <input type="password" name="password"/></label></div>
+    <div><input type="submit" value="Sign In"/></div>
+    <p th:if="${param.error}">아이디나 비밀번호 형식 불일치</p>
+</form>
+</body>
+</html>
